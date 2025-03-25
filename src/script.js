@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Text rotation animation
+  window.onload = function () {
+  // Text rotation animation
   const TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -86,15 +88,16 @@ document.addEventListener('DOMContentLoaded', function() {
       that.tick();
     }, delta);
   };
-  
+
   const elements = document.getElementsByClassName('txt-rotate');
-  for (let i=0; i<elements.length; i++) {
+  for (let i = 0; i < elements.length; i++) {
     const toRotate = elements[i].getAttribute('data-rotate');
     const period = elements[i].getAttribute('data-period');
     if (toRotate) {
       new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
   }
+};
   
   // Initialize ScrollReveal for animations
   const sr = ScrollReveal({
