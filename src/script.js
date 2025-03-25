@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Text rotation animation
   window.onload = function () {
+
+    console.log("TxtRotate script loaded");
+
   // Text rotation animation
   const TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
