@@ -1,3 +1,5 @@
+console.log("✅ script.js loaded!");
+
 // Document ready function
 document.addEventListener('DOMContentLoaded', function() {
   // Theme toggle functionality
