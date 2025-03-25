@@ -521,7 +521,6 @@ body.dark-mode {
 
 .light-mode .project-tech span {
   background-color: rgba(184, 145, 255, 0.4);
-  #b891ff;
   color: var(--primary-dark);
 }
 
