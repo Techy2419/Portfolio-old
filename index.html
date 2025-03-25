@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Romil Patel - Web Developer & ASU Student</title>
+    <meta name="description" content="Personal portfolio of Romil Patel - Web Developer & ASU Student" />
+    <meta name="author" content="Romil Patel" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/styles.css">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Romil Patel - Web Developer & ASU Student" />
+    <meta property="og:description" content="Personal portfolio of Romil Patel" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
+
+  <body class="dark-mode">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#page-top">Romil Patel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button id="theme-toggle" class="btn theme-toggle">
+                <i class="fas fa-sun"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="page-top">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 class="fw-bold" id="hero-name">Romil Patel</h1>
+            <h2 class="fw-light mb-5" id="hero-title">Web Developer & ASU Student</h2>
+            <p class="lead hero-tagline">Building <span class="txt-rotate" data-period="2000" 
+               data-rotate='[ "responsive websites.", "creative web apps.", "interactive experiences.", "the future." ]'></span></p>
+            <a class="btn btn-primary btn-lg mt-4" href="#projects" id="view-work-btn">
+              View My Work
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="page-section" id="about">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-heading">About Me</h2>
+            <hr class="divider my-4" />
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="about-img-container">
+              <!-- Removed the badge overlay -->
+               <img src="img/LinkedIn-Profile.png" class="about-img" alt="Romil Patel">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="about-text reveal-left">
+              <p>I'm Romil Patel, a first-year student at <strong>Arizona State University</strong>, majoring in <strong>Astronomical and Planetary Sciences</strong>. While my academic journey is rooted in space and science, I've developed a strong passion for <strong>web development</strong> through the <strong>Global Career Accelerator (GCA)</strong> program.</p>
+              <p>I've built multiple interactive web projects using <strong>HTML</strong>, <strong>CSS</strong>, <strong>Bootstrap</strong>, <strong>JavaScript</strong>, and <strong>Firebase</strong>. I'm also part of the <strong>ASU Valorant eSports team</strong>, combining my love for gaming with teamwork and strategy.</p>
+              <p>I recently earned a GCA certification badge for completing training in HTML, CSS, and Bootstrap — a recognition of my growth and dedication in web development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="page-section bg-light" id="skills">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-heading">Skills</h2>
+            <hr class="divider my-4" />
+          </div>
+        </div>
+        <div class="row skills-container">
+          <!-- Skill Items Will Be Generated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="page-section" id="achievements">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-heading">Achievements</h2>
+            <hr class="divider my-4" />
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <!-- GCA Badge -->
+          <div class="col-md-4 mb-4">
+            <div class="achievement-card reveal-item">
+              <h3>🏅 Global Career Accelerator Badge</h3>
+              <p>Completed certification in <strong>HTML, CSS, and Bootstrap</strong> through the GCA program.</p>
+               <a href="https://www.credential.net/74c31023-1dd8-4e86-8b18-7f1a518b3b50#acc.gy9AZYPD" target="_blank" rel="noopener noreferrer">
+                <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/136728910" alt="GCA Badge" class="badge-img">
+              </a>
+            </div>
+          </div>
+          <!-- <div class="achievement-badge">
+            <div class="badge-content">
+              <h3>🏅 Global Career Accelerator Badge</h3>
+              <p>Completed certification in <strong>HTML, CSS, and Bootstrap</strong> through the GCA program.</p>
+              <a href="https://www.credential.net/74c31023-1dd8-4e86-8b18-7f1a518b3b50#acc.gy9AZYPD" target="_blank" rel="noopener noreferrer">
+                <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/136728910" alt="GCA Badge" class="badge-img">
+              </a>
+            </div>
+          </div>
+           -->
+          <!-- JavaScript & APIs Badge (Coming Soon) - Commented out as requested
+          <div class="col-md-4 mb-4">
+            <div class="achievement-card achievement-placeholder reveal-item">
+              <h3>JavaScript & APIs Badge</h3>
+              <p>(Coming Soon)</p>
+              <div class="placeholder-image">
+                <i class="fas fa-award"></i>
+              </div>
+            </div>
+          </div>
+          
+          Full Certificate (Coming Soon) - Commented out as requested
+          <div class="col-md-4 mb-4">
+            <div class="achievement-card achievement-placeholder reveal-item">
+              <h3>Full Certificate</h3>
+              <p>HTML, CSS, Bootstrap, and JavaScript</p>
+              <p><em>Expected: April 2025</em></p>
+              <div class="placeholder-image">
+                <i class="fas fa-certificate"></i>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="page-section" id="projects">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-heading">Projects</h2>
+            <hr class="divider my-4" />
+          </div>
+        </div>
+        <div class="row">
+          <!-- Project 1 -->
+          <div class="col-lg-6 mb-4">
+            <div class="project-card reveal-item">
+              <div class="project-img">
+                <img src="img/project1.png" alt="FinTrackr Project" class="img-fluid">
+              </div>
+              <div class="project-info">
+                <h3>FinTrackr <span class="project-status"> (In Progress)</span></h3>
+                <p>Expense tracking web app with simple budget management, transaction logging, and visual reporting.</p>
+                <div class="project-tech">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Firebase</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://fin-trackr-gilt.vercel.app/" class="btn btn-primary"><i class="fas fa-globe"></i> Live Demo</a>
+                  <a href="https://github.com/Techy2419/FinTrackr.git" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="col-lg-6 mb-4">
+            <div class="project-card reveal-item">
+              <div class="project-img">
+                <img src="img/project2.png" alt="emailjs-registration-form Project" class="img-fluid">
+              </div>
+              <div class="project-info">
+                <h3>EmailJs Registration Form</h3>
+                <p>Responsive Bootstrap form that sends confirmation emails using EmailJS and features a modern dark UI with a thank-you screen.</p>
+                <div class="project-tech">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>EmailJs</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://emailjs-registration-form.vercel.app/" class="btn btn-primary"><i class="fas fa-globe"></i> Live Demo</a>
+                  <a href="https://github.com/Techy2419/emailjs-registration-form.git" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- More projects can be added here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="page-section bg-dark text-white" id="contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-heading">Let's Connect</h2>
+            <hr class="divider light my-4" />
+            <p class="text-white-75 mb-5">Ready to start your next project with me? Send me a message or connect with me through social media!</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <div class="social-links">
+              <a href="https://github.com/Techy2419" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github fa-3x"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/romil-patel-" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin fa-3x"></i>
+              </a>
+              <a href="mailto:romilpatel2007@gmail.com">
+                <i class="fas fa-envelope fa-3x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+      <div class="container">
+        <div class="small text-center text-muted">
+          © 2023 Romil Patel. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- ScrollReveal Library -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="/src/script.js"></script>
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </body>
+</html>
