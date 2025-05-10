@@ -6,7 +6,8 @@ import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
 import { Mail, User, Send } from 'lucide-react';
 
-interface FormValues {
+// Update the interface to extend Record<string, unknown>
+interface FormValues extends Record<string, unknown> {
   user_name: string;
   user_email: string;
   message: string;
