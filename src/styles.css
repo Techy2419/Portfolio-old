@@ -477,8 +477,6 @@ body.dark-mode {
   overflow: hidden;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
   height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .project-status {
@@ -486,6 +484,7 @@ body.dark-mode {
   font-weight: 500;
   color: #FFA500; /* or use your accent: var(--primary) */
 }
+
 
 .light-mode .project-card {
   background-color: var(--card-light);
@@ -519,19 +518,11 @@ body.dark-mode {
 
 .project-info {
   padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
 
 .project-info h3 {
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
-}
-
-.project-info p {
-  flex-grow: 1;
-  margin-bottom: 1rem;
 }
 
 .project-tech {
@@ -561,7 +552,7 @@ body.dark-mode {
 .project-links {
   display: flex;
   gap: 1rem;
-  margin-top: auto;
+  margin-top: 1.5rem;
 }
 
 .project-links .btn {
