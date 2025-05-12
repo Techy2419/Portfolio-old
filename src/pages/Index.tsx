@@ -28,12 +28,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section - Adapted to work with both light and dark modes */}
-      <section id="contact" className="py-20 px-4 bg-muted">
+      {/* Contact Section - Improved for light mode compatibility */}
+      <section id="contact" className="py-20 px-4 bg-secondary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-secondary-foreground">Let's Connect</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-lg mb-12">
+          <p className="text-lg mb-12 text-secondary-foreground">
             Ready to start your next project with me? Send me a message or connect with me through social media!
           </p>
           
@@ -42,26 +42,26 @@ const Index = () => {
               href="https://github.com/Techy2419" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-4 rounded-full bg-background hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="p-4 rounded-full bg-white shadow-sm hover:bg-primary hover:text-white transition-colors"
               aria-label="GitHub"
             >
-              <Github size={28} />
+              <Github size={28} className="text-secondary-foreground hover:text-white" />
             </a>
             <a 
               href="https://www.linkedin.com/in/romil-patel-" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-4 rounded-full bg-background hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="p-4 rounded-full bg-white shadow-sm hover:bg-primary hover:text-white transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={28} />
+              <Linkedin size={28} className="text-secondary-foreground hover:text-white" />
             </a>
             <a 
               href="mailto:romilpatel2007@gmail.com"
-              className="p-4 rounded-full bg-background hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="p-4 rounded-full bg-white shadow-sm hover:bg-primary hover:text-white transition-colors"
               aria-label="Email"
             >
-              <Mail size={28} />
+              <Mail size={28} className="text-secondary-foreground hover:text-white" />
             </a>
           </div>
         </div>
