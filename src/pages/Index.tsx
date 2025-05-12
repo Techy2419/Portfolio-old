@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -72,6 +73,7 @@ const Index = () => {
         </p>
       </header>
 
+      {/* Projects section */}
       <section id="projects" className="py-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
         
@@ -163,7 +165,7 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Updated Contact Section with the new Contact Form */}
+      {/* Contact Section */}
       <section className="py-16 px-4 md:px-8 lg:px-16 bg-muted" id="contact">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
