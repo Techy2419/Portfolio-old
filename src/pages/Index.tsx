@@ -2,8 +2,10 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import ContactForm from "@/components/ContactForm";
-import { Mail, Github, Linkedin } from 'lucide-react'; // Updated imports
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Mail, Github, Linkedin } from 'lucide-react';
 
 const Index = () => {
   const projects = [
@@ -62,6 +64,11 @@ const Index = () => {
       codeLink: "#"
     }
   ];
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log("Form submitted!");
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -169,14 +176,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div className="flex flex-col items-center md:items-start space-y-8">
-              <div className="text-center md:text-left mb-8 md:mb-0">
+              <div className="text-center md:text-left">
                 <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto md:mx-0">
+                <p className="text-muted-foreground max-w-md">
                   Ready to start your next project with me? Send me a message or connect with me through social media!
                 </p>
               </div>
               
-              <div className="flex flex-col space-y-4 w-full">
+              <div className="flex flex-col space-y-4 w-full max-w-md">
                 <a 
                   href="mailto:romilpatel2007@gmail.com" 
                   className="flex items-center space-x-3 p-3 rounded-lg transition-all hover:bg-accent group"
@@ -184,7 +191,10 @@ const Index = () => {
                   <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary/20 transition-colors">
                     <Mail size={24} className="text-primary" />
                   </div>
-                  <span className="text-lg">romilpatel2007@gmail.com</span>
+                  <div>
+                    <p className="font-semibold text-foreground">Email</p>
+                    <p className="text-sm text-muted-foreground">romilpatel2007@gmail.com</p>
+                  </div>
                 </a>
                 
                 <a 
@@ -196,7 +206,10 @@ const Index = () => {
                   <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary/20 transition-colors">
                     <Github size={24} className="text-primary" />
                   </div>
-                  <span className="text-lg">github.com/Techy2419</span>
+                   <div>
+                    <p className="font-semibold text-foreground">GitHub</p>
+                    <p className="text-sm text-muted-foreground">github.com/Techy2419</p>
+                  </div>
                 </a>
                 
                 <a 
@@ -208,13 +221,56 @@ const Index = () => {
                   <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary/20 transition-colors">
                     <Linkedin size={24} className="text-primary" />
                   </div>
-                  <span className="text-lg">linkedin.com/in/romil-patel-</span>
+                  <div>
+                    <p className="font-semibold text-foreground">LinkedIn</p>
+                    <p className="text-sm text-muted-foreground">linkedin.com/in/romil-patel-</p>
+                  </div>
                 </a>
               </div>
             </div>
             
             <div className="bg-card p-6 sm:p-8 rounded-lg shadow-md">
-              <ContactForm />
+              <h3 className="text-2xl font-semibold mb-6 text-center md:text-left text-card-foreground">
+                Send me a message
+              </h3>
+              <form onSubmit={handleFormSubmit} className="space-y-6">
+                <div>
+                  <Label htmlFor="user_name" className="mb-1 block text-sm font-medium text-foreground">Name</Label>
+                  <Input 
+                    type="text" 
+                    name="user_name" 
+                    id="user_name" 
+                    placeholder="Your Name" 
+                    required 
+                    className="bg-background text-foreground placeholder:text-muted-foreground"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="user_email" className="mb-1 block text-sm font-medium text-foreground">Email</Label>
+                  <Input 
+                    type="email" 
+                    name="user_email" 
+                    id="user_email" 
+                    placeholder="Your Email" 
+                    required 
+                    className="bg-background text-foreground placeholder:text-muted-foreground"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="message" className="mb-1 block text-sm font-medium text-foreground">Message</Label>
+                  <Textarea 
+                    name="message" 
+                    id="message" 
+                    rows={4} 
+                    placeholder="Your Message" 
+                    required 
+                    className="bg-background text-foreground placeholder:text-muted-foreground"
+                  />
+                </div>
+                <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-[#1ecbe1] transition-colors">
+                  Send Message
+                </Button>
+              </form>
             </div>
           </div>
         </div>
