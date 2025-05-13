@@ -597,47 +597,89 @@ body.dark-mode {
 }
 
 .light-mode .contact-form-wrapper {
-  background-color: var(--card-light);
+  background-color: var(--card-light); /* #f9f9f9 */
   box-shadow: var(--shadow-light);
 }
 
 .dark-mode .contact-form-wrapper {
-  background-color: var(--card-dark);
+  background-color: var(--card-dark); /* #1a1a1a */
   box-shadow: var(--shadow-dark);
 }
 
+.light-mode .contact-form-wrapper .form-label {
+  color: var(--text-light); /* Dark text for labels in light mode form */
+}
+
+.dark-mode .contact-form-wrapper .form-label {
+  color: var(--text-dark); /* Light text for labels in dark mode form */
+}
+
 .contact-form-wrapper .form-control {
-  background-color: transparent;
+  /* background-color: transparent; REMOVED */
   border: 1px solid;
   padding: 0.75rem;
+  border-radius: 0.375rem; /* Adding a slight border-radius like in images */
+  width: 100%; /* Ensure it takes full width if not already */
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .light-mode .contact-form-wrapper .form-control {
-  border-color: var(--border-light);
-  color: var(--text-light);
+  background-color: #ffffff; /* White background for inputs in light mode */
+  border-color: var(--border-light); /* #e0e0e0 */
+  color: var(--text-light); /* #101010 */
 }
 
 .dark-mode .contact-form-wrapper .form-control {
-  border-color: var(--border-dark);
-  color: var(--text-dark);
+  background-color: #252525; /* Custom dark background for inputs in dark mode */
+  border-color: var(--border-dark); /* #2c2c2c */
+  color: var(--text-dark); /* #f5f5f5 */
 }
 
 .contact-form-wrapper .form-control:focus {
-  box-shadow: 0 0 0 3px rgba(116, 47, 248, 0.25);
+  box-shadow: 0 0 0 3px rgba(116, 47, 248, 0.25); /* Primary color focus ring */
+  border-color: var(--primary-dark); /* Highlight border with primary color on focus */
 }
+
+/* Placeholder styling */
+.light-mode .contact-form-wrapper .form-control::placeholder {
+  color: #999999; /* Consistent placeholder color for light mode */
+  opacity: 1;
+}
+.dark-mode .contact-form-wrapper .form-control::placeholder {
+  color: #777777; /* Consistent placeholder color for dark mode */
+  opacity: 1;
+}
+.light-mode .contact-form-wrapper .form-control::-moz-placeholder { /* Firefox */
+  color: #999999;
+  opacity: 1;
+}
+.dark-mode .contact-form-wrapper .form-control::-moz-placeholder { /* Firefox */
+  color: #777777;
+  opacity: 1;
+}
+.light-mode .contact-form-wrapper .form-control:-ms-input-placeholder { /* Edge/IE */
+  color: #999999;
+}
+.dark-mode .contact-form-wrapper .form-control:-ms-input-placeholder { /* Edge/IE */
+  color: #777777;
+}
+
 
 .contact-form-wrapper .btn-primary {
   background-color: var(--primary-dark);
   border-color: var(--primary-dark);
+  color: #fff; /* Ensure text is white */
   padding: 0.75rem;
   font-weight: 600;
   transition: all var(--transition-speed);
+  width: 100%; /* Ensure button takes full width */
 }
 
 .contact-form-wrapper .btn-primary:hover {
-  background-color: var(--primary-hover);
-  border-color: var(--primary-hover);
-  box-shadow: 0 5px 15px rgba(116, 47, 248, 0.4);
+  background-color: #1ecbe1; /* Cyan hover background */
+  border-color: #1ecbe1; /* Cyan hover border */
+  color: #fff; /* Keep text white on cyan hover for contrast */
+  box-shadow: 0 5px 15px rgba(30, 203, 225, 0.4); /* Adjusted shadow for cyan */
   transform: translateY(-3px);
 }
 
