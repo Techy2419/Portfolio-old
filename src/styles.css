@@ -590,26 +590,79 @@ body.dark-mode {
   color: #fff;
 }
 
-.social-links {
+.contact-form-wrapper {
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.light-mode .contact-form-wrapper {
+  background-color: var(--card-light);
+  box-shadow: var(--shadow-light);
+}
+
+.dark-mode .contact-form-wrapper {
+  background-color: var(--card-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.contact-form-wrapper .form-control {
+  background-color: transparent;
+  border: 1px solid;
+  padding: 0.75rem;
+}
+
+.light-mode .contact-form-wrapper .form-control {
+  border-color: var(--border-light);
+  color: var(--text-light);
+}
+
+.dark-mode .contact-form-wrapper .form-control {
+  border-color: var(--border-dark);
+  color: var(--text-dark);
+}
+
+.contact-form-wrapper .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(116, 47, 248, 0.25);
+}
+
+.contact-form-wrapper .btn-primary {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  padding: 0.75rem;
+  font-weight: 600;
+  transition: all var(--transition-speed);
+}
+
+.contact-form-wrapper .btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  box-shadow: 0 5px 15px rgba(116, 47, 248, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Enhanced Social Links for Contact Section */
+#contact .social-links a {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all var(--transition-speed);
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
-.social-links a {
-  transition: transform var(--transition-speed), color var(--transition-speed);
-  color: var(--text-dark);
+.light-mode #contact .social-links a {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.light-mode .social-links a {
-  color: var(--text-dark);
+.dark-mode #contact .social-links a {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-.social-links a:hover {
-  transform: translateY(-5px);
-  color: var(--primary-dark);
+#contact .social-links a:hover {
+  transform: translateX(5px);
+  background-color: rgba(116, 47, 248, 0.2);
 }
 
 footer {
