@@ -590,6 +590,7 @@ body.dark-mode {
   color: #fff;
 }
 
+/* Refined Contact Form Styles */
 .contact-form-wrapper {
   padding: 2rem;
   border-radius: 10px;
@@ -597,21 +598,13 @@ body.dark-mode {
 }
 
 .light-mode .contact-form-wrapper {
-  background-color: var(--card-light); /* #f9f9f9 */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Reduced shadow */
+  background-color: var(--card-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .dark-mode .contact-form-wrapper {
-  background-color: var(--card-dark); /* #1a1a1a */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Reduced shadow */
-}
-
-.light-mode .contact-form-wrapper .form-label {
-  color: var(--text-light); /* Dark text for labels in light mode form */
-}
-
-.dark-mode .contact-form-wrapper .form-label {
-  color: var(--text-dark); /* Light text for labels in dark mode form */
+  background-color: var(--card-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form-wrapper .form-control {
@@ -635,98 +628,73 @@ body.dark-mode {
 }
 
 .contact-form-wrapper .form-control:focus {
-  box-shadow: 0 0 0 2px rgba(30, 203, 225, 0.25); /* Cyan focus ring */
-  border-color: #1ecbe1; /* Cyan border on focus */
-}
-
-/* Placeholder styling */
-.light-mode .contact-form-wrapper .form-control::placeholder {
-  color: #999999;
-  opacity: 1;
-}
-.dark-mode .contact-form-wrapper .form-control::placeholder {
-  color: #777777;
-  opacity: 1;
-}
-.light-mode .contact-form-wrapper .form-control::-moz-placeholder {
-  color: #999999;
-  opacity: 1;
-}
-.dark-mode .contact-form-wrapper .form-control::-moz-placeholder {
-  color: #777777;
-  opacity: 1;
-}
-.light-mode .contact-form-wrapper .form-control:-ms-input-placeholder {
-  color: #999999;
-}
-.dark-mode .contact-form-wrapper .form-control:-ms-input-placeholder {
-  color: #777777;
+  box-shadow: 0 0 0 2px rgba(30, 203, 225, 0.25);
+  border-color: #1ecbe1;
 }
 
 .contact-form-wrapper .btn-primary {
-  background-color: #1ecbe1; /* Cyan background */
-  border-color: #1ecbe1; /* Cyan border */
+  background-color: #1ecbe1;
+  border-color: #1ecbe1;
   color: #fff;
-  padding: 0.5rem 1rem; /* Smaller button */
+  padding: 0.5rem 1rem;
   font-weight: 500;
   transition: all var(--transition-speed);
-  width: auto; /* Not full width */
+  width: auto;
 }
 
 .contact-form-wrapper .btn-primary:hover {
-  background-color: #19b5c9; /* Slightly darker cyan hover */
+  background-color: #19b5c9;
   border-color: #19b5c9;
   color: #fff;
-  box-shadow: 0 2px 8px rgba(30, 203, 225, 0.4); /* Subtle shadow */
+  box-shadow: 0 2px 8px rgba(30, 203, 225, 0.4);
   transform: translateY(-2px);
 }
 
-/* Refined Social Links for Contact Section */
-#contact .social-links {
+/* Minimalist Social Links Styles */
+.contact-social-container {
   display: flex;
-  gap: 1.5rem; /* Increased spacing */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
 }
 
-#contact .social-links a {
+.social-links-minimal {
   display: flex;
-  align-items: center;
-  transition: all var(--transition-speed);
-  color: inherit;
-  text-decoration: none;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
-.light-mode #contact .social-links a {
+.social-links-minimal a {
+  color: #ffffff;
+  font-size: 2rem;
+  transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.light-mode .social-links-minimal a {
   color: var(--text-light);
 }
 
-.dark-mode #contact .social-links a {
+.dark-mode .social-links-minimal a {
   color: var(--text-dark);
 }
 
-#contact .social-links a:hover {
-  color: #1ecbe1; /* Cyan hover color */
-  transform: translateY(-2px);
+.social-links-minimal a:hover {
+  color: #1ecbe1;
+  transform: translateY(-3px);
 }
 
-#contact .social-links a i {
-  font-size: 1.5rem; /* Slightly smaller icons */
-  margin-right: 0.75rem;
-}
-
-footer {
-  padding: 2rem 0;
-}
-
-.light-mode footer {
-  background-color: var(--card-light);
-}
-
-.dark-mode footer {
-  background-color: var(--card-dark);
-}
-
-.text-muted {
-  color: var(--text-dark) !important;
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .social-links-minimal {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .contact-social-container {
+    align-items: center;
+    margin-bottom: 2rem;
+  }
 }
 
 @keyframes fadeInDown {
