@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, GitHub, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 
 const ContactForm = () => {
   return (
@@ -12,7 +12,7 @@ const ContactForm = () => {
           rel="noopener noreferrer"
           className="flex items-center space-x-3 p-3 rounded-lg transition-all hover:text-cyan-500 group"
         >
-          <GitHub size={24} className="text-primary" />
+          <Github size={24} className="text-primary" />
           <div>
             <p className="font-semibold text-foreground">GitHub</p>
             <p className="text-sm text-muted-foreground">github.com/Techy2419</p>
