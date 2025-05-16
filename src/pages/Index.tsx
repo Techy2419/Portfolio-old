@@ -1,8 +1,8 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Mail, Github, Linkedin } from 'lucide-react';
 import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
@@ -62,11 +62,6 @@ const Index = () => {
       codeLink: "#"
     }
   ];
-
-  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log("Form submitted!");
-  };
 
   return (
     <div className="min-h-screen bg-background">
