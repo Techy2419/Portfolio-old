@@ -1,146 +1,48 @@
 
-import React, { useState } from 'react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
-import emailjs from '@emailjs/browser';
-import { Mail, Send, User } from 'lucide-react';
-import { toast } from 'sonner';
-
-import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-
-// Form validation schema
-const formSchema = z.object({
-  user_name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  user_email: z.string().email({ message: "Please enter a valid email address." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-});
+import React from 'react';
+import { Mail, GitHub, Linkedin } from 'lucide-react';
 
 const ContactForm = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Define form
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      user_name: '',
-      user_email: '',
-      message: '',
-    },
-  });
-
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    setIsSubmitting(true);
-    
-    try {
-      await emailjs.send(
-        'service_hr5fel7', 
-        'template_3y8l8dn',
-        values,
-        'b-uNk6s2WC-8hJ1WN'
-      );
-      
-      toast.success('Message sent successfully!');
-      form.reset();
-    } catch (error) {
-      console.error('Error sending email:', error);
-      toast.error('Failed to send message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="w-full max-w-md mx-auto">
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <FormField
-            control={form.control}
-            name="user_name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="flex items-center gap-2">
-                  <User size={16} className="text-primary" />
-                  Name
-                </FormLabel>
-                <FormControl>
-                  <Input 
-                    placeholder="Your name" 
-                    {...field} 
-                    className="bg-background border-input" 
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <FormField
-            control={form.control}
-            name="user_email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="flex items-center gap-2">
-                  <Mail size={16} className="text-primary" />
-                  Email
-                </FormLabel>
-                <FormControl>
-                  <Input 
-                    placeholder="your.email@example.com" 
-                    type="email"
-                    {...field} 
-                    className="bg-background border-input"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                  <Textarea 
-                    placeholder="Write your message here..." 
-                    className="min-h-[120px] resize-none bg-background border-input"
-                    {...field} 
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <Button 
-            type="submit" 
-            className="w-full transition-all duration-300 hover:translate-y-[-3px]"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? (
-              'Sending...'
-            ) : (
-              <>
-                <Send size={16} className="mr-2" />
-                Send Message
-              </>
-            )}
-          </Button>
-        </form>
-      </Form>
+      <div className="flex flex-col items-center space-y-6">
+        <a 
+          href="https://github.com/Techy2419" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center space-x-3 p-3 rounded-lg transition-all hover:text-cyan-500 group"
+        >
+          <GitHub size={24} className="text-primary" />
+          <div>
+            <p className="font-semibold text-foreground">GitHub</p>
+            <p className="text-sm text-muted-foreground">github.com/Techy2419</p>
+          </div>
+        </a>
+        
+        <a 
+          href="https://www.linkedin.com/in/romil-patel-" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center space-x-3 p-3 rounded-lg transition-all hover:text-cyan-500 group"
+        >
+          <Linkedin size={24} className="text-primary" />
+          <div>
+            <p className="font-semibold text-foreground">LinkedIn</p>
+            <p className="text-sm text-muted-foreground">linkedin.com/in/romil-patel-</p>
+          </div>
+        </a>
+        
+        <a 
+          href="mailto:romilpatel2007@gmail.com" 
+          className="flex items-center space-x-3 p-3 rounded-lg transition-all hover:text-cyan-500 group"
+        >
+          <Mail size={24} className="text-primary" />
+          <div>
+            <p className="font-semibold text-foreground">Email</p>
+            <p className="text-sm text-muted-foreground">romilpatel2007@gmail.com</p>
+          </div>
+        </a>
+      </div>
     </div>
   );
 };
