@@ -1,12 +1,16 @@
 
-// This file is needed for the build process to work
-// but we're using traditional HTML/CSS/JS for this project
-// The actual entry point is index.html
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
+import App from './App.tsx'
+import './index.css'
 
-// For compatibility purposes
-const rootElement = document.getElementById('root');
-if (rootElement) {
-  rootElement.innerHTML = '<p>Loading...</p>';
-}
-
-// The main application is loaded through index.html
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+      <Analytics />
+    </BrowserRouter>
+  </React.StrictMode>,
+)
