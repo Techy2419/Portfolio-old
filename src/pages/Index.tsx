@@ -65,21 +65,21 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4">My Portfolio</h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+      <header className="py-12 text-center lg:py-8">
+        <h1 className="text-3xl font-bold mb-3 lg:text-4xl">My Portfolio</h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto lg:text-xl">
           Showcasing my work and projects in web development and design
         </p>
       </header>
 
       {/* Projects section */}
-      <section id="projects" className="py-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
+      <section id="projects" className="py-12 px-4 md:px-6 lg:px-12 max-w-6xl mx-auto lg:py-8">
+        <h2 className="text-2xl font-bold text-center mb-8 lg:text-3xl lg:mb-10">Projects</h2>
         
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <Card key={project.id} className="flex flex-col overflow-hidden h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <div className="overflow-hidden h-48 bg-muted">
+            <Card key={project.id} className="flex flex-col overflow-hidden h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-lg lg:max-w-sm">
+              <div className="overflow-hidden h-40 bg-muted lg:h-36">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -165,10 +165,10 @@ const Index = () => {
       </section>
       
       {/* Contact Section */}
-      <section className="py-16 px-4 md:px-8 lg:px-16 bg-muted" id="contact">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
+      <section className="py-12 px-4 md:px-6 lg:px-12 bg-muted lg:py-8" id="contact">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8 lg:mb-10">
+            <h2 className="text-2xl font-bold mb-3 lg:text-3xl lg:mb-4">Let's Connect</h2>
             <hr className="divider my-4 mx-auto" />
             <p className="text-muted-foreground max-w-md mx-auto">
               Ready to start your next project with me? Connect with me through social media!
